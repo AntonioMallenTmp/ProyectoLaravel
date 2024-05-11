@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test</title>
+    @vite("resources/css/app.css")
 </head>
 <body>
-    <nav>
-        <a href="/" >Home</a>
+
+<x-layouts.header/>
+
+    <nav class="h-15v bg-nav">
+        <a href="" >Index</a>
         <a href="test" >Alumnos</a>
         <a href="" >Contacta</a>
         <a href="" >About</a>
     </nav>
-    <h1>Test</h1>
     <hr>
-    <h2>Esto es test</h2>
+    
+   <main class="h-65v bg-main">
+        {{ $slot }}
+   </main>
 </body>
+
+<x-layouts.footer />
+
 </html>

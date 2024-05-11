@@ -2,10 +2,15 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', [app\Http\Controllers\MainController::class, 'index']);
+Route::get('/',[MainController::class, 'index']);
+
+// Route::view("test","test");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
