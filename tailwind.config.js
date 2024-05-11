@@ -23,7 +23,7 @@ export default {
                 'header': "#1C489E",
                 'nav': "#FFFFFF",
                 'main':"#DCE5F4",
-                'footer' : "#E5E5E5"
+                'footer' : "#000000" //"#E5E5E5"
             }
         }
     },

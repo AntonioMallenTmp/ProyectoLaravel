@@ -10,7 +10,7 @@ use App\Http\Controllers\MainController;
 // Route::get('/', [app\Http\Controllers\MainController::class, 'index']);
 Route::get('/',[MainController::class, 'index']);
 
-// Route::view("test","test");
+Route::view("test","test");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
