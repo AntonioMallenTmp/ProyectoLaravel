@@ -8,9 +8,10 @@ use App\Http\Controllers\MainController;
 // });
 
 // Route::get('/', [app\Http\Controllers\MainController::class, 'index']);
-Route::get('/',[MainController::class, 'index']);
+Route::get('/',[MainController::class, 'index']); //Lo hago con mi controlador simplemente para probarlo (Realmente no es necesario en esta web en concreto)
 
-Route::view("test","test");
+Route::view("alumnos","alumnos");
+Route::view("about","about");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
