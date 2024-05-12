@@ -11,12 +11,13 @@
 
 <x-layouts.header/>
 
-    <x-layouts.nav/>
-    <main class="h-65v bg-main">
-            {{ $slot }}
-    </main>
-</body>
+<x-layouts.nav/>
+
+<main class="h-68v bg-main">
+        {{ $slot }}
+</main>
 
 <x-layouts.footer />
 
+</body>
 </html>

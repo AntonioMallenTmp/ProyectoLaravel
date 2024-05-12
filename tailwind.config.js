@@ -15,9 +15,10 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             height:{
-                "10v":"10vh",
-                "15v":"15vh",
-                "65v":"65vh"
+                "10v":"10vh", //navbar
+                "16v":"16vh", //Header
+                "30v":"30vh", //LOGO en login y register
+                "68v":"68vh"  //Main
             },
             colors: {
                 'header': "#1C489E",
