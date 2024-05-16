@@ -28,3 +28,11 @@ Aparte de alumnos, este proyecto tiene varias páginas creadas a partir de layou
 - Breeze
 - Tailwind CSS
 - VSCode
+
+## Contacto y Créditos
+
+Cualquier duda o consulta, no dudes en contactarme.
+
+**Nombre:** Antonio Mallen Gimeno
+
+**Email:** antoniomallen1@gmail.com
