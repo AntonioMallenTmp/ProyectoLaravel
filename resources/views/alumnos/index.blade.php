@@ -1,13 +1,13 @@
+
 <x-layouts.layout>
- 
+
+<div class="p-10 overflow-x-auto shadow-md sm:rounded-lg h-full">
     @if (session()->get("status"))
         <div role="alert" class="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             <span>{{ session()->get("status") }}</span>
         </div>
     @endif  
-<div class="p-10 overflow-x-auto shadow-md sm:rounded-lg h-full">
-
     <h1 class="pb-4 text-4xl text-gray-500 text-center">Listado de alumnos</h1>
 
     
@@ -61,11 +61,15 @@
                         </td>
                         {{-- Borrar --}}
                         <td class="py-4">
-                            <button href="#" >
+                            <form action="{{ route("alumnos.destroy", $alumno->id) }}" method="POST">
+                                @csrf
+                                @method("DELETE")
+                            <button type="submit" >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-700">
                                   <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                 </svg>
                             </button>
+                            </form>
                         </td>
                     </tr>
             @endforeach

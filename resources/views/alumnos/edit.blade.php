@@ -3,7 +3,7 @@
     <div class="w-full sm:max-w-md px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
 
 
-    <form class="max-w-md mx-auto"  method="POST" action="{{ route('alumnos.update', $alumno->id )}}">
+    <form  class="max-w-md mx-auto"  method="POST" action="{{ route('alumnos.update', $alumno->id )}}"> {{-- onsubmit="(e)=>e.preventDefault()" --}}
         @method('PUT')
         @csrf
         <div class="relative z-0 w-full mb-5 group">
@@ -55,10 +55,22 @@
           @endif
         </div>
        
-        <button type="submit" class="mr-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Actualizar</button>
+        <button onclick="handleConfirm()" type="submit" class="mr-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Actualizar</button>
         <a href="{{ route("alumnos.index") }}" class="text-white bg-red-400 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Cancelar</a>
       </form>
       
 </div>
 </div>
+{{--
+    No  acabo de saber como hacerlo ya que la tutoria se corta
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function handleConfirm(){
+        Swal.fire({
+        title: "The Internet?",
+        text: "That thing is still around?",
+        icon: "success"
+        });
+    }
+</script> --}}
 </x-layouts.layout>

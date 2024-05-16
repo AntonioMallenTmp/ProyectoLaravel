@@ -12,8 +12,8 @@ use App\Http\Controllers\MainController;
 Route::get('/',[MainController::class, 'index']); //Lo hago con mi controlador simplemente para probarlo (Realmente no es necesario en esta web en concreto)
 
 Route::resource("alumnos",AlumnoController::class);
-// Route::view("alumnos","alumnos");
 Route::view("about","about");
+Route::view("contact","contact");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
